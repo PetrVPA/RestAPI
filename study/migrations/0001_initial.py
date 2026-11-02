@@ -7,27 +7,91 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Course',
+            name="Course",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(blank=True, max_length=25, null=True, verbose_name='Название курса')),
-                ('preview', models.ImageField(blank=True, help_text='Загрузите preview курса', null=True, upload_to='study/preview/', verbose_name='Аватар')),
-                ('description', models.TextField(blank=True, null=True, verbose_name='Описание курса')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        blank=True,
+                        max_length=25,
+                        null=True,
+                        verbose_name="Название курса",
+                    ),
+                ),
+                (
+                    "preview",
+                    models.ImageField(
+                        blank=True,
+                        help_text="Загрузите preview курса",
+                        null=True,
+                        upload_to="study/preview/",
+                        verbose_name="Аватар",
+                    ),
+                ),
+                (
+                    "description",
+                    models.TextField(
+                        blank=True, null=True, verbose_name="Описание курса"
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Lesson',
+            name="Lesson",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(blank=True, max_length=25, null=True, verbose_name='Название урока')),
-                ('preview', models.ImageField(blank=True, help_text='Загрузите preview урока', null=True, upload_to='study/preview/', verbose_name='Аватар')),
-                ('description', models.TextField(blank=True, null=True, verbose_name='Описание урока')),
-                ('video_url', models.URLField(blank=True, null=True, verbose_name='Ссылка на видео урока')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        blank=True,
+                        max_length=25,
+                        null=True,
+                        verbose_name="Название урока",
+                    ),
+                ),
+                (
+                    "preview",
+                    models.ImageField(
+                        blank=True,
+                        help_text="Загрузите preview урока",
+                        null=True,
+                        upload_to="study/preview/",
+                        verbose_name="Аватар",
+                    ),
+                ),
+                (
+                    "description",
+                    models.TextField(
+                        blank=True, null=True, verbose_name="Описание урока"
+                    ),
+                ),
+                (
+                    "video_url",
+                    models.URLField(
+                        blank=True, null=True, verbose_name="Ссылка на видео урока"
+                    ),
+                ),
             ],
         ),
     ]
