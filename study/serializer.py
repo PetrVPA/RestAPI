@@ -7,7 +7,8 @@ from study.models import Course, Lesson
 class CourseSerializer(ModelSerializer):
     class Meta:
         model = Course
-        fields = '__all__'
+        fields = "__all__"
+
 
 class CourseCountLessonSerializer(ModelSerializer):
     # Имя переменной должно совпадать с тем, что мы добавим в fields
@@ -21,10 +22,10 @@ class CourseCountLessonSerializer(ModelSerializer):
     class Meta:
         model = Course
         # Убедитесь, что 'id' и 'preview' тоже здесь, если они нужны в ответе
-        fields = ('id', 'title', 'description', 'count_lesson_course')
+        fields = ("id", "title", "description", "count_lesson_course")
 
 
 class LessonSerializer(ModelSerializer):
     class Meta:
         model = Lesson
-        fields = '__all__'
+        fields = "__all__"
