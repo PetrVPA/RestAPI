@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "study",
     "users",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,11 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = os.getenv("EMAIL_HOST_USER")
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter', # Для сортировки
+    ],
+}
