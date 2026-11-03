@@ -1,0 +1,35 @@
+[
+  {
+    "model": "users.payment",
+    "pk": 1,
+    "fields": {
+      "date_payment": "2023-10-25",
+      "category_payment": "course",
+      "payment_amount": "5000.00",
+      "payment_option": "translation",
+      "user": 1
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 2,
+    "fields": {
+      "date_payment": "2023-10-25",
+      "category_payment": "course",
+      "payment_amount": "400.00",
+      "payment_option": "translation",
+      "user": 2
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 3,
+    "fields": {
+      "date_payment": "2023-10-25",
+      "category_payment": "course",
+      "payment_amount": "5000.00",
+      "payment_option": "translation",
+      "user": 3
+    }
+  }
+  ]

@@ -1,0 +1,65 @@
+[
+   {
+    "model": "users.student",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$32ilHVWbx2QT7c5jJG2eYV$T7k5LvVeE+Yh1Y9q9KD0Of31UlFaAmge/S1Gq6jmZIc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Иван",
+        "first_name": "Иван",
+        "last_name": "Иванов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "ivan@example.com",
+        "phone": "+79991234567",
+        "city": "Москва",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+   }, 
+  {
+    "model": "users.student",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Федор",
+        "first_name": "Федор",
+        "last_name": "Занозин",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "zanoza77@example.com",
+        "phone": "+79991234569",
+        "city": "Кострома",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+   }, 
+  {
+    "model": "users.student",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Сергей",
+        "first_name": "Сергей",
+        "last_name": "Ершов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "sergey@example.com",
+        "phone": "+79991234577",
+        "city": "Кострома",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+   }
+]

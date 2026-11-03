@@ -1,6 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+import study
+from config import settings
+
 
 class Student(AbstractUser):
     email = models.EmailField(unique=True, verbose_name="Email")
@@ -30,6 +33,43 @@ class Student(AbstractUser):
     def __str__(self):
         return self.email
 
+
 class Payment(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    date_payment = models.DateField()
+    TYPE_CHOICES = (
+        ("course", "Курс"),
+        ("lesson", "Урок"),
+    )
+    OPTION_CHOICES = (
+        ("cash", "Наличные"),
+        ("translation", "Перевод"),
+    )
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,  # <--- Правильный способ для кастомных юзеров
+        on_delete=models.CASCADE,
+        verbose_name="Студент"
+    )
+
+    date_payment = models.DateField(null=True, blank=True)
+
+    category_payment = models.CharField(
+        max_length=20, choices=TYPE_CHOICES, default="course"
+    )
+    study.course = models.ForeignKey(
+        "Course",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name="Оплаченный курс",
+    )
+    study.lesson = models.ForeignKey(
+        "Lesson",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name="Оплаченный урок",
+    )
+    payment_amount = models.DecimalField(max_digits=10, decimal_places=2)
+
+    payment_option = models.CharField(
+        max_length=20, choices=TYPE_CHOICES, default="translation"
+    )
