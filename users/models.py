@@ -29,3 +29,7 @@ class Student(AbstractUser):
 
     def __str__(self):
         return self.email
+
+class Payment(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    date_payment = models.DateField()
