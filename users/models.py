@@ -71,5 +71,5 @@ class Payment(models.Model):
     payment_amount = models.DecimalField(max_digits=10, decimal_places=2)
 
     payment_option = models.CharField(
-        max_length=20, choices=TYPE_CHOICES, default="translation"
+        max_length=20, choices=OPTION_CHOICES, default="translation"
     )
