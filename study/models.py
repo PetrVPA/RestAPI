@@ -34,3 +34,13 @@ class Lesson(models.Model):
         blank=True,
         null=True,
     )
+
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='lessons',
+        verbose_name="Курс"
+    )
+
+    def __str__(self):
+        return self.titlepython
