@@ -17,7 +17,7 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     title = models.CharField(
-        max_length=25, verbose_name="Название урока", blank=True, null=True
+        max_length=55, verbose_name="Название урока", blank=True, null=True
     )
     preview = models.ImageField(
         upload_to="study/preview/",
