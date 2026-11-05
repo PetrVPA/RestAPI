@@ -1,0 +1,44 @@
+[
+{
+    "model": "users.student",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$tAyEkM2bCaxRYkpkp1muTc$5noy0UOC89xdZokNfNmKAAuhFjk8he1M4V2SOpEMuQw=",
+        "last_login": "2026-11-03T11:07:40.912Z",
+        "is_superuser": true,
+        "username": "",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:06:59.518Z",
+        "email": "meteor@mail.ru",
+        "phone": null,
+        "city": null,
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$32ilHVWbx2QT7c5jJG2eYV$T7k5LvVeE+Yh1Y9q9KD0Of31UlFaAmge/S1Gq6jmZIc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Иван",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "",
+        "phone": null,
+        "city": null,
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
