@@ -1,0 +1,22 @@
+[
+{
+    "model": "study.course",
+    "pk": 1,
+    "fields": {
+        "title": "Дроны основные типы и назначение.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 2,
+    "fields": {
+        "title": "Защита информационных сетей.",
+        "preview": "",
+        "description": null,
+        "owner": 1
+    }
+}
+]

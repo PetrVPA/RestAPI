@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Course(models.Model):
@@ -13,6 +14,14 @@ class Course(models.Model):
         help_text="Загрузите preview курса",
     )
     description = models.TextField(verbose_name="Описание курса", blank=True, null=True)
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='courses',
+        verbose_name="Владелец",
+        null=True,  # Сначала ставим null=True, чтобы миграция прошла без ошибок, если есть старые данные
+        blank=True
+    )
 
 
 class Lesson(models.Model):
@@ -37,6 +46,14 @@ class Lesson(models.Model):
 
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, related_name="lessons", verbose_name="Курс"
+    )
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='lessons',
+        verbose_name="Владелец",
+        null=True,
+        blank=True
     )
 
     def __str__(self):

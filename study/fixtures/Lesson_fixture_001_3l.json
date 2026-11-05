@@ -1,0 +1,74 @@
+[
+{
+    "model": "study.lesson",
+    "pk": 1,
+    "fields": {
+        "title": "Первый урок.",
+        "preview": "",
+        "description": null,
+        "video_url": null,
+        "course": 1,
+        "owner": 2
+    }
+},
+{
+    "model": "study.lesson",
+    "pk": 2,
+    "fields": {
+        "title": "Основы управления дронами",
+        "preview": "",
+        "description": "Даются иеоретические основы управления квадракоптерами.",
+        "video_url": "",
+        "course": 1,
+        "owner": 2
+    }
+},
+{
+    "model": "study.lesson",
+    "pk": 3,
+    "fields": {
+        "title": "Динамика полета дрона",
+        "preview": "",
+        "description": "Дается описание полета дрона, основы его устойчивого полета, принципы управления по рысканью и тангажу.",
+        "video_url": "",
+        "course": 1,
+        "owner": 2
+    }
+},
+{
+    "model": "study.lesson",
+    "pk": 4,
+    "fields": {
+        "title": "Основы безопасности",
+        "preview": "",
+        "description": "Дается описание типизированных способов обеспечения пассивной безопасности информационных сетей.",
+        "video_url": "",
+        "course": 2,
+        "owner": 1
+    }
+},
+{
+    "model": "study.lesson",
+    "pk": 5,
+    "fields": {
+        "title": "Варианты угроз",
+        "preview": "",
+        "description": "Дается описание возможных угроз.",
+        "video_url": "",
+        "course": 2,
+        "owner": 1
+    }
+},
+{
+    "model": "study.lesson",
+    "pk": 6,
+    "fields": {
+        "title": "D-DOS атаки или бабушки едут в автобусе",
+        "preview": "",
+        "description": "Дается описание атак приводящих к отказу обслуживания",
+        "video_url": "",
+        "course": 2,
+        "owner": 1
+    }
+}
+]

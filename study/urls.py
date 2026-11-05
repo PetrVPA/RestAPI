@@ -10,12 +10,15 @@ from study.views import (
     LessonUpdateAPIView,
     LessonDestroyAPIView,
 )
-from study.apps import StudyConfig
+#from study.apps import StudyConfig
 
-app_name = StudyConfig.name
+#app_name = StudyConfig.name
+
+app_name = "study"
 
 router = SimpleRouter()
-router.register("", CourseViewSet)
+#router.register("", CourseViewSet, basename='course')
+router.register(r'course', CourseViewSet, basename='course')
 
 
 urlpatterns = [
@@ -31,4 +34,4 @@ urlpatterns = [
     path("", include(router.urls)),
 ]
 
-urlpatterns += router.urls
+#urlpatterns += router.urls
