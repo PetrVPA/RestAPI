@@ -8,7 +8,7 @@ from study.serializer import (
     LessonSerializer,
     CourseCountLessonSerializer,
 )
-from users.permissions import IsModerator, IsOwner
+from users.permissions import IsModerator, IsOwner, IsNotModerator
 
 
 class LessonCreateAPIView(generics.CreateAPIView):
@@ -48,10 +48,9 @@ class CourseViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ['create']:
-            # Создавать могут только авторизованные пользователи)
-            permission_classes = [IsAuthenticated or not IsModerator]  # админы не могут создавать IsAdminUser
+            # Создавать могут только авторизованные, но не модераторы
+            permission_classes = [IsNotModerator]
         elif self.action in ['update', 'partial_update', 'retrieve', 'list']:
-            # Редактировать/просматривать может модератор ИЛИ владелец
             permission_classes = [IsModerator | IsOwner]
         elif self.action in ['destroy']:
             permission_classes = [IsOwner]
@@ -75,10 +74,9 @@ class LessonViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ['create']:
-            # Создавать могут только авторизованные пользователи)
-            permission_classes = [IsAuthenticated or not IsModerator]  # админы не могут создавать IsAdminUser
+            # Создавать могут только авторизованные, но не модераторы
+            permission_classes = [IsNotModerator]
         elif self.action in ['update', 'partial_update', 'retrieve', 'list']:
-            # Редактировать/просматривать может модератор ИЛИ владелец
             permission_classes = [IsModerator | IsOwner]
         elif self.action in ['destroy']:
             permission_classes = [IsOwner]

@@ -1,4 +1,5 @@
 from rest_framework import permissions
+from rest_framework.permissions import BasePermission
 
 
 class IsModerator(permissions.BasePermission):
@@ -26,3 +27,8 @@ class IsOwner(permissions.BasePermission):
         # Для уроков может понадобиться проверять владельца через курс (если у урока нет своего owner)
         # return obj.course.owner == request.user
         return False
+
+class IsNotModerator(BasePermission):
+    def has_permission(self, request, view):
+        # Если пользователь авторизован и НЕ входит в группу модераторов
+        return request.user.is_authenticated and not request.user.groups.filter(name='moderators').exists()
