@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
 from users.models import Payment, Student
 
 
@@ -33,3 +35,13 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = '__all__' # Или перечислите конкретные поля, исключив пароль
+
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    # Переопределяем поле username на email
+    username_field = 'email'
+
+    def validate(self, attrs):
+        # Теперь attrs будет содержать 'email' и 'password'
+        data = super().validate(attrs)
+        return data

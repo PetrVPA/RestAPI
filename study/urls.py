@@ -8,7 +8,7 @@ from study.views import (
     LessonListAPIView,
     LessonRetrieveAPIView,
     LessonUpdateAPIView,
-    LessonDestroyAPIView,
+    LessonDestroyAPIView, SubscriptionAPIView, LessonViewSet,
 )
 #from study.apps import StudyConfig
 
@@ -18,7 +18,8 @@ app_name = "study"
 
 router = SimpleRouter()
 #router.register("", CourseViewSet, basename='course')
-router.register(r'course', CourseViewSet, basename='course')
+router.register(r'courses', CourseViewSet, basename='courses')
+router.register(r'lessons', LessonViewSet, basename='lesson')
 
 
 urlpatterns = [
@@ -32,6 +33,7 @@ urlpatterns = [
         "lesson/<int:pk>/update/", LessonUpdateAPIView.as_view(), name="lesson_update"
     ),
     path("", include(router.urls)),
+    path('subscribe/', SubscriptionAPIView.as_view(), name='subscribe'),
 ]
 
 #urlpatterns += router.urls

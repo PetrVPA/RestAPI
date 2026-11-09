@@ -1,0 +1,214 @@
+[
+{
+    "model": "users.student",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$32ilHVWbx2QT7c5jJG2eYV$T7k5LvVeE+Yh1Y9q9KD0Of31UlFaAmge/S1Gq6jmZIc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Иван",
+        "first_name": "Иван",
+        "last_name": "Иванов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12Z",
+        "email": "ivan@example.com",
+        "phone": "+79991234567",
+        "city": "Москва",
+        "avatar": "",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Федор",
+        "first_name": "Федор",
+        "last_name": "Занозин",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "zanoza77@example.com",
+        "phone": "+79991234569",
+        "city": "Кострома",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Сергей",
+        "first_name": "Сергей",
+        "last_name": "Ершов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "sergey@example.com",
+        "phone": "+79991234577",
+        "city": "Кострома",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$6u32r0N2WMnFWcGwjw8bP9$P19uvbxtfKIDhf24oBm9Vn46JK0+LbqlES7Y8kbAJvc=",
+        "last_login": "2026-11-05T09:53:58.837Z",
+        "is_superuser": true,
+        "username": "",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-11-05T09:53:12.677Z",
+        "email": "meteor@mail.ru",
+        "phone": null,
+        "city": null,
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Варвара",
+        "first_name": "Варвара",
+        "last_name": "Стеблова",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "varvara@example.com",
+        "phone": "+79975437677",
+        "city": "Коломна",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Виктор",
+        "first_name": "Виктор",
+        "last_name": "Стрельцов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "victor@example.com",
+        "phone": "+79985837567",
+        "city": "Калуга",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Серафима",
+        "first_name": "Серафима",
+        "last_name": "Каблукова",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "serafima@example.com",
+        "phone": "+79977037507",
+        "city": "Калуга",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Елена",
+        "first_name": "Елена",
+        "last_name": "Беднякова",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "elena@example.com",
+        "phone": "+79980933807",
+        "city": "Балашиха",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Иван2",
+        "first_name": "Иван",
+        "last_name": "Клепиков",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "k_ivan@example.com",
+        "phone": "+79970965547",
+        "city": "Красногорск",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.student",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$PZZDVEOxBz0Ju3feOYdLSr$zJrPJOa/dtFimTNRR3Gc8uMV+cLO/EEnjRc38TKc+b4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Леонид",
+        "first_name": "Леонид",
+        "last_name": "Забелин",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-11-03T11:20:12.688Z",
+        "email": "z_leonid@example.com",
+        "phone": "+79963871419",
+        "city": "Красноярск",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
