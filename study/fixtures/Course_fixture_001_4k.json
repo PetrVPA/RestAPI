@@ -1,0 +1,72 @@
+[
+{
+    "model": "study.course",
+    "pk": 1,
+    "fields": {
+        "title": "Дроны основные типы и назначение.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 2,
+    "fields": {
+        "title": "Защита информационных сетей.",
+        "preview": "",
+        "description": null,
+        "owner": 1
+    }
+},
+{
+    "model": "study.course",
+    "pk": 3,
+    "fields": {
+        "title": "Современная кулинария.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 4,
+    "fields": {
+        "title": "Современная архитектура городов.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 5,
+    "fields": {
+        "title": "Выживание в экстремальных ситуациях.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 6,
+    "fields": {
+        "title": "Теория автоматического управления.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+},
+{
+    "model": "study.course",
+    "pk": 7,
+    "fields": {
+        "title": "Современная боевая авиация.",
+        "preview": "",
+        "description": null,
+        "owner": 2
+    }
+}
+]

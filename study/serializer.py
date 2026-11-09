@@ -1,12 +1,18 @@
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from study.models import Course, Lesson
+from study.models import Lesson, Course, Subscription
+from study.validators import YouTubeValidator
+
+
 
 class LessonSerializer(ModelSerializer):
     class Meta:
         model = Lesson
-        fields = "__all__"
+        fields = '__all__'
+        validators = [
+            YouTubeValidator(field='materials') # Укажите ваше поле
+        ]
 
 
 class CourseSerializer(ModelSerializer):
@@ -18,6 +24,19 @@ class CourseSerializer(ModelSerializer):
 
     def get_count_lesson_course(self, obj):
         return obj.lessons.count()
+
+    def get_is_subscribed(self, obj):
+        """
+        Проверяет, подписан ли текущий пользователь на данный курс.
+        obj - это текущий экземпляр курса.
+        """
+        user = self.context.get('request').user
+        # Если пользователь не авторизован, он ни на что не подписан
+        if user.is_anonymous:
+            return False
+
+        # Проверяем наличие подписки в базе
+        return Subscription.objects.filter(user=user, course=obj).exists()
 
 
 
