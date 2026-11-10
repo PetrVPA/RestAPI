@@ -18,9 +18,10 @@ class LessonSerializer(ModelSerializer):
 class CourseSerializer(ModelSerializer):
     count_lesson_course = SerializerMethodField()
     lessons = LessonSerializer(many=True, read_only=True)
+    is_subscribed = SerializerMethodField()
     class Meta:
         model = Course
-        fields = ('id', 'title', 'preview', 'description', 'count_lesson_course', 'lessons')
+        fields = ('id', 'title', 'preview', 'description', 'count_lesson_course', 'lessons', 'is_subscribed')
 
     def get_count_lesson_course(self, obj):
         return obj.lessons.count()
@@ -30,13 +31,13 @@ class CourseSerializer(ModelSerializer):
         Проверяет, подписан ли текущий пользователь на данный курс.
         obj - это текущий экземпляр курса.
         """
-        user = self.context.get('request').user
-        # Если пользователь не авторизован, он ни на что не подписан
-        if user.is_anonymous:
+        request = self.context.get('request')
+        # Если запроса нет или пользователь не авторизован - он ни на что не подписан
+        if not request or request.user.is_anonymous:
             return False
 
         # Проверяем наличие подписки в базе
-        return Subscription.objects.filter(user=user, course=obj).exists()
+        return Subscription.objects.filter(user=request.user, course=obj).exists()
 
 
 
