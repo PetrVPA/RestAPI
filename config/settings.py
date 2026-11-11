@@ -1,11 +1,14 @@
 
 
 import os
+import stripe
 from dotenv import load_dotenv
 
 from pathlib import Path
 
 load_dotenv()
+
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +34,8 @@ INSTALLED_APPS = [
     "study",
     "users",
     "django_filters",
+
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
@@ -67,7 +72,8 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        #"ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": os.getenv("NAME"),
 
         "USER": os.getenv("USER"),
@@ -152,3 +158,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
