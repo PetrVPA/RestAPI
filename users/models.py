@@ -42,6 +42,7 @@ class Payment(models.Model):
     OPTION_CHOICES = (
         ("cash", "Наличные"),
         ("translation", "Перевод"),
+        ("stripe", "Stripe (Карта)"),
     )
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,  # <--- Правильный способ для кастомных юзеров
@@ -71,5 +72,9 @@ class Payment(models.Model):
     payment_amount = models.DecimalField(max_digits=10, decimal_places=2)
 
     payment_option = models.CharField(
-        max_length=20, choices=OPTION_CHOICES, default="translation"
+        max_length=20, choices=OPTION_CHOICES, default="stripe"
     )
+
+    stripe_session_id = models.CharField(max_length=255, blank=True, null=True, verbose_name="ID сессии Stripe")
+    payment_link = models.URLField(max_length=500, blank=True, null=True, verbose_name="Ссылка на оплату")
+    is_paid = models.BooleanField(default=False, verbose_name="Оплачено")

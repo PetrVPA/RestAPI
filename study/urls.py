@@ -2,13 +2,15 @@ from django.urls import path, include
 
 from rest_framework.routers import SimpleRouter
 
+
+
 from study.views import (
     CourseViewSet,
     LessonCreateAPIView,
     LessonListAPIView,
     LessonRetrieveAPIView,
     LessonUpdateAPIView,
-    LessonDestroyAPIView, SubscriptionAPIView, LessonViewSet,
+    LessonDestroyAPIView, SubscriptionAPIView, LessonViewSet
 )
 #from study.apps import StudyConfig
 
@@ -34,6 +36,8 @@ urlpatterns = [
     ),
     path("", include(router.urls)),
     path('subscribe/', SubscriptionAPIView.as_view(), name='subscribe'),
+
+
 ]
 
 #urlpatterns += router.urls
