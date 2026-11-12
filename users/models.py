@@ -55,15 +55,15 @@ class Payment(models.Model):
     category_payment = models.CharField(
         max_length=20, choices=TYPE_CHOICES, default="course"
     )
-    study.course = models.ForeignKey(
-        "Course",
+    study_course = models.ForeignKey(
+        to = "study.Course",
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
         verbose_name="Оплаченный курс",
     )
-    study.lesson = models.ForeignKey(
-        "Lesson",
+    study_lesson = models.ForeignKey(
+        to ="study.Lesson",
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
